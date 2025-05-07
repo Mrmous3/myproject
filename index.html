@@ -3,25 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Ilham Maulana Akbar</title>
+  <title>Portofolio Maulana Abdul Muhyi</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; }
-    h1 { color: #333; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #005b99;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header, .container {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Ilham Maulana Akbar</h1>
-  <p>Lulusan Pariwisata Perhotelan | Front Desk Agent | Housekeeping</p>
 
-  <h2>Pengalaman Kerja</h2>
-  <ul>
-    <li>Front Desk Agent - Hotel Rivoli Jakarta (2024–Sekarang)</li>
-    <li>Kepala Logistik - Mega Dunia Konstruksindo (2021–2023)</li>
-    <li>Front Desk Agent - Hotel Rasuna Mansion (2015–2021)</li>
-  </ul>
+  <header>
+    <h1>Maulana Abdul Muhyi</h1>
+    <p>Front Desk Agent | Housekeeping Specialist | Logistik</p>
+  </header>
 
-  <h2>Kontak</h2>
-  <p>Email: kamu@email.com</p>
-  <p>LinkedIn: linkedin.com/in/ilham-akbar</p>
+  <div class="container">
+    <section class="card">
+      <h2>Profil Singkat</h2>
+      <p>Lulusan terbaik dengan pengalaman multi-peran di dunia hospitality selama lebih dari 10 tahun, mulai dari front office, housekeeping, hingga logistik. Terbiasa memimpin tim dan fokus pada pelayanan pelanggan.</p>
+    </section>
+
+    <section class="card">
+      <h2>Pengalaman Kerja</h2>
+      <ul>
+        <li>Bell Attendant - Keraton at The Plaza (2024 – Sekarang)</li>
+        <li>Bell Attendant - Grand Hyatt Jakarta (2022 – 2024)</li>
+        <li>Storekeeper / Receiving - Berbagai Hotel (16 tahun)</li>
+        <li>Chef dan Senior Cook - 26 tahun pengalaman</li>
+        <li>Sales Manager & FO Supervisor - 15 tahun</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Kontak</h2>
+      <p>Email: maulana.muhyi@email.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/maulana-muhyi" target="_blank">linkedin.com/in/maulana-muhyi</a></p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Maulana Abdul Muhyi
+  </footer>
+
 </body>
-  </html>
+</html>
