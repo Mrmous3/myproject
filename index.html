@@ -26,19 +26,41 @@
     header {
       background-color: #0d47a1;
       color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+      padding: 1rem;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .running-text {
+      background-color: #1976d2;
+      color: white;
+      padding: 0.3rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
     }
 
     .navbar {
       background-color: #1565c0;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 1rem;
       padding: 0.8rem;
     }
@@ -155,66 +177,56 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
       .navbar {
+        display: none;
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .navbar.show {
+        display: flex;
+      }
+
+      .navbar a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
       }
 
       .portfolio-item img {
         height: 120px;
       }
-      .menu-toggle {
-  display: none;
-  padding: 1rem;
-  font-size: 1.5rem;
-  background-color: #1565c0;
-  color: white;
-  cursor: pointer;
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .navbar.show {
-    display: flex;
-  }
-
-  .navbar a {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Rekam Jejak Alan</h1>
+    <div class="header-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <h1>Rekam Jejak Alan</h1>
+    </div>
+    <marquee behavior="scroll" direction="left" class="running-text">
+      Selamat Datang di Rekam Jejak Alan. Semua pencapaian akan diabadikan di sini.
+    </marquee>
   </header>
-<!-- Tambahkan di dalam <body> tepat di atas <nav class="navbar"> -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <i class="fas fa-bars"></i>
-</div>
 
-<nav class="navbar" id="navbar">
-  <a href="#profil">Profil</a>
-  <a href="#tentang">Tentang Saya</a>
-  <a href="#pengalaman">Pengalaman</a>
-  <a href="#portofolio">Portofolio</a>
-  <a href="#kontak">Kontak</a>
-</nav>
+  <nav class="navbar" id="navbar">
+    <a href="#profil">Profil</a>
+    <a href="#tentang">Tentang Saya</a>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
   <main class="container">
     <section id="profil" data-aos="fade-up">
       <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/IMG-20250417-WA0001.jpg" alt="Foto Profil" class="profile-pic" />
@@ -289,10 +301,10 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script>
-  function toggleMenu() {
-    document.getElementById("navbar").classList.toggle("show");
-  }
-</script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("show");
+    }
+  </script>
 
 </body>
   </html>
