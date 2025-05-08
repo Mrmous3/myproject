@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
   <style>
     * {
       margin: 0;
@@ -202,7 +203,17 @@
       .portfolio-item img {
         height: 120px;
       }
-    }
+    .swiper {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
   </style>
 </head>
 <body>
@@ -233,7 +244,33 @@
       <h2 style="text-align: center;">Maulana Abdul Muhyi</h2>
       <p class="position">Digital Marketing | Pariwisata dan Perhotelan</p>
     </section>
-
+<!-- Carousel Gambar -->
+<section data-aos="fade-up">
+  <h2 style="text-align: center;">Informasi Kegiatan</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/IMG-20250508-WA0104.jpg" alt="Slide 1" style="width:100%; border-radius: 12px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/20250423_100740.jpg" alt="Slide 2" style="width:100%; border-radius: 12px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/FB_IMG_17466842245390681.jpg" alt="Slide 3" style="width:100%; border-radius: 12px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/IMG-20250508-WA0117.jpg" alt="Slide 4" style="width:100%; border-radius: 12px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://raw.githubusercontent.com/Mrmous3/myproject/main/IMG-20250508-WA0118.jpg" alt="Slide 5" style="width:100%; border-radius 12px;">
+      </div>
+    </div>
+    <!-- Navigasi -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
     <section id="tentang" data-aos="fade-up">
       <h2>Tentang Saya</h2>
       <p>Lulusan Pariwisata dan Perhotelan dengan pengalaman sebagai Steward di Grand Hyatt Jakarta sejak 2022. Pernah menjadi Leader Pre-Opening Team merangkap Waiter di TidLom Boat Noodle dan magang di General Affair PT. Electronic City Indonesia Tbk. Aktif menjalankan usaha jasa digital di Alan Store. Terbiasa bekerja tim, disiplin, dan cepat beradaptasi.</p>
@@ -305,6 +342,22 @@
       document.getElementById("navbar").classList.toggle("show");
     }
   </script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 1300,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 </body>
   </html>
